@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Autarkia-Msgqueue"
+version = "0.1.0"
+description = "Reliable offline message queue for WebSocket clients: per-type TTL, message-id dedupe, discard-after-elsewhere-delivery, atomic replay, per-user locks and a receiver-side staleness guard."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Shihao Qi", email = "qishihao512@gmail.com" },
+]
+keywords = [
+    "websocket",
+    "offline-queue",
+    "message-replay",
+    "at-least-once",
+    "reconnect",
+    "ttl",
+    "autarkia",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://qishihao.icu/projects/autarkia"
+Repository = "https://github.com/hakituo/Autarkia-Msgqueue"
+Roadmap = "https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md"
+"Autarkia Runtime" = "https://github.com/hakituo/Autarkia"
+Author = "https://qishihao.icu"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/autarkia_msgqueue"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE"]
