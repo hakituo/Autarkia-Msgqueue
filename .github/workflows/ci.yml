@@ -38,5 +38,9 @@ jobs:
           python -m twine check dist/*
       - name: Install the wheel in a clean dir and import it
         run: |
-          python -m pip install --no-deps --target /tmp/pkg dist/*.whl
-          PYTHONPATH=/tmp/pkg python -c "import autarkia_msgqueue as m, pathlib; assert (pathlib.Path(m.__file__).parent / 'py.typed').exists(); print('wheel ok', m.__version__)"
+          python -m pip install --no-deps --target /tmp/wheelpkg dist/*.whl
+          PYTHONPATH=/tmp/wheelpkg python -c "import autarkia_msgqueue as m, pathlib; assert (pathlib.Path(m.__file__).parent / 'py.typed').exists(); print('wheel ok', m.__version__)"
+      - name: Install the sdist in a clean dir and import it
+        run: |
+          python -m pip install --no-deps --target /tmp/sdistpkg dist/*.tar.gz
+          PYTHONPATH=/tmp/sdistpkg python -c "import autarkia_msgqueue as m, pathlib; assert (pathlib.Path(m.__file__).parent / 'py.typed').exists(); print('sdist ok', m.__version__)"
