@@ -436,7 +436,7 @@ class TestApi:
     def test_version(self):
         import autarkia_msgqueue
 
-        assert autarkia_msgqueue.__version__ == "0.1.0"
+        assert autarkia_msgqueue.__version__ == "0.1.1"
 
     def test_all_exports(self):
         import autarkia_msgqueue

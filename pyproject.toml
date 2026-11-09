@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "Autarkia-Msgqueue"
-version = "0.1.0"
+version = "0.1.1"
 description = "Reliable offline message queue for WebSocket clients: per-type TTL, message-id dedupe, discard-after-elsewhere-delivery, atomic replay, per-user locks and a receiver-side staleness guard."
 readme = "README.md"
 license = "MIT"
