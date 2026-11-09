@@ -27,7 +27,7 @@
 
 **按类型分档的 TTL、`message_id` 去重、已在别端投递后丢弃、原子重放、per-user flush 锁、接收端时效守卫**——把「客户端离线时暂存消息」这件小事做对。
 
-来自 [Autarkia](https://qishihao.icu/projects/autarkia) agent 运行时：手机 App 和桌面 bot 共用一个 user id，同一条「晚安」被反复投递。整个系列见[组件库路线图](https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md)。
+来自 [Autarkia](https://qishihao.dev/projects/autarkia) agent 运行时：手机 App 和桌面 bot 共用一个 user id，同一条「晚安」被反复投递。整个系列见[组件库路线图](https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md)。
 
 ### 为什么
 
@@ -108,11 +108,11 @@ if is_stale_offline_replay(payload, max_age_seconds=600):
 
 ### 系列与链接
 
-- 项目页：<https://qishihao.icu/projects/autarkia>
+- 项目页：<https://qishihao.dev/projects/autarkia>
 - 运行时仓库：<https://github.com/hakituo/Autarkia>
 - 本包：<https://github.com/hakituo/Autarkia-Msgqueue>
 - 组件库路线图：<https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md>
-- 作者：Shihao Qi — <https://qishihao.icu>
+- 作者：Shihao Qi — <https://qishihao.dev>
 
 ### 许可
 
@@ -124,7 +124,7 @@ MIT
 
 **Per-type TTL, message-id dedupe, discard-after-elsewhere-delivery, atomic replay, per-user flush locks, and a receiver-side staleness guard** — the small "store messages while the client is offline" problem, done correctly.
 
-Extracted from the [Autarkia](https://qishihao.icu/projects/autarkia) agent runtime, where a phone app and a desktop bot shared one user id and kept re-delivering the same goodnight message. See the [component roadmap](https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md).
+Extracted from the [Autarkia](https://qishihao.dev/projects/autarkia) agent runtime, where a phone app and a desktop bot shared one user id and kept re-delivering the same goodnight message. See the [component roadmap](https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md).
 
 ### Why
 
@@ -205,11 +205,11 @@ Replayed payloads carry `is_offline_replay: True` and `offline_queued_at` (epoch
 
 ### The bigger picture
 
-- Project page: <https://qishihao.icu/projects/autarkia>
+- Project page: <https://qishihao.dev/projects/autarkia>
 - Runtime repository: <https://github.com/hakituo/Autarkia>
 - This package: <https://github.com/hakituo/Autarkia-Msgqueue>
 - Roadmap: <https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md>
-- Author: Shihao Qi — <https://qishihao.icu>
+- Author: Shihao Qi — <https://qishihao.dev>
 
 ### License
 

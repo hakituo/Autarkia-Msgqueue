@@ -37,11 +37,11 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://qishihao.icu/projects/autarkia"
+Homepage = "https://qishihao.dev/projects/autarkia"
 Repository = "https://github.com/hakituo/Autarkia-Msgqueue"
 Roadmap = "https://github.com/hakituo/Autarkia-tool/blob/main/ROADMAP.md"
 "Autarkia Runtime" = "https://github.com/hakituo/Autarkia"
-Author = "https://qishihao.icu"
+Author = "https://qishihao.dev"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
